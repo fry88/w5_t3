@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: Pod
-metadata:
-  name: w5-task2
-spec:
-  containers:
-  - name: w5-task2
-    image: gcr.io/k8s-glc/w5-task2:v2.0.0
