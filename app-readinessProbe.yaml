@@ -1,0 +1,19 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: w5t3-pod
+spec:
+  containers:
+  - name: w5t3-container
+    image: gcr.io/k8s-glc/w5-task2:v1.0.0
+    ports:
+    - containerPort: 8080
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080
+    readinessProbe:
+      httpGet:
+        path: /ready
+        port: 8080
